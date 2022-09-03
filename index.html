@@ -10,6 +10,16 @@
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .views {
+            bottom: 0;
+            color: #fff;
+            background: #000000d1;
+            right: 0;
+            padding: 0px 6px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -50,7 +60,7 @@
                             <a class="md:p-4 py-2 block hover:text-purple-400 text-purple-500 font-medium"
                                 href="#">News</a>
                         </li>
-                        <li onclick="toggleModal()">
+                        <li>
                             <a class="md:p-4 py-2 block hover:text-purple-400 font-medium" href="#">Blog</a>
                         </li>
                     </ul>
@@ -131,46 +141,15 @@
         </div>
     </section>
     <footer class="mt-8 py-8">
-        <p class="text-center text-xl font-semibold">&copy; Copyright 2022 Daily News</p></footer>
-    <!-- Tailwind Modal Start -->
+        <p class="text-center text-xl font-semibold">&copy; Copyright 2022 Daily News</p>
+    </footer>
+    <!-- Single Blog  -->
     <div class="fixed z-10 overflow-y-auto top-0 w-full left-0 hidden" id="modal">
-        <div class="flex items-center justify-center min-height-100vh pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-            <div class="fixed inset-0 transition-opacity">
-                <div class="absolute inset-0 bg-gray-900 opacity-75" />
-            </div>
-            <span class="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
-            <div class="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full overflow-y-visible"
-                role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 ">
-                    <div class="pt-4">
-                        <h2 class="text-xl font-medium mb-4">1 . What is the difference between var, let ,const ?</h2>
-                        <p class="text-gray-700 font-normal mb-4">Var : It can be declared without initialization.
-                            Let : It can be declared without initialization.
-                            Const : It cannot be declared without initialization.</p>
-                    </div>
-                    <div class="pt-4">
-                        <h2 class="text-xl font-medium mb-4">2. What is the difference between arrow function and regular function?</h2>
-                        <p class="text-gray-700 font-normal mb-4">Regular functions created using function declarations or expressions are constructible and callable. And The arrow
-                        functions are only callable and not constructible, i.e arrow functions can never be used as constructor functions</p>
-                    </div>
-                    <div class="pt-4">
-                        <h2 class="text-xl font-medium mb-4">3. Why do you use template string??</h2>
-                        <p class="text-gray-700 font-normal mb-4">Template strings are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables
-                        and expressions into strings without needing to concatenate like in older versions of JavaScript.</p>
-                    </div>
-                </div>
-                <div class="bg-gray-200 px-4 py-3 text-right">
-                    <button type="button" class="py-2 px-4 bg-gray-500 text-white rounded hover:bg-gray-700 mr-2"
-                        onclick="toggleModal()"><i class="fas fa-times"></i> Cancel</button>
-                </div>
-            </div>
-        </div>
+
     </div>
-    <script>
-        function toggleModal() {
-            document.getElementById('modal').classList.toggle('hidden')
-        }
-    </script>
+
+    <!-- Single Blog  -->
+
     <script src="./navbar.js"></script>
     <script src="./app.js"></script>
 </body>
