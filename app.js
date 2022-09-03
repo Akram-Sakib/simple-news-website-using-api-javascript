@@ -30,6 +30,7 @@ const fetchCategories = (categories) => {
   });
 };
 
+// Filter Data By Category
 const handleCategoryFilter = async (categoryId) => {
   categoryNameEl.innerText = totalCategoryItem(categoryId);
   const categoriesUrl = `https://openapi.programming-hero.com/api/news/category/${categoryId}`;
