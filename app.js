@@ -21,6 +21,7 @@ const loadCategories = async () => {
 };
 
 const fetchCategories = (categories) => {
+  categories.data.news_category.sort((a, b) => b.category_id - a.category_id);
   categories.data.news_category.forEach((category) => {
     const div = document.createElement("div");
     div.innerHTML = `<span onClick="handleCategoryFilter('${category.category_id}')" class="text-gray-600 cursor-pointer font-medium" href="#">
